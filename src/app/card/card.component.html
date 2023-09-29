@@ -1,0 +1,36 @@
+<!-- <div class="inline-flex m-2 ">
+  <div>
+    <mat-card class=" mt-6">
+      <mat-card-title>{{ ticket.title }}</mat-card-title>
+      <mat-card-content>
+        <p class="text-xl">ID: {{ ticket.id }}</p>
+        <p>Status: {{ ticket.status }}</p>
+
+        <div [innerHTML]="ticket.description"></div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button class="custom-button" (click)="openEditDialog()">Edit</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
+</div> -->
+<div class="inline-flex m-2">
+    <div
+    cdkDrag [attr.data-status]="ticket.status"
+    >
+      <mat-card class="mt-6">
+        <mat-card-title>{{ ticket.title }}</mat-card-title>
+        <mat-card-content>
+          <p class="text-xl">ID: {{ ticket.id }}</p>
+          <p>Status: {{ ticket.status }}</p>
+          <div [innerHTML]="ticket.description"></div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button class="custom-button" (click)="openEditDialog()">Edit</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  
+  

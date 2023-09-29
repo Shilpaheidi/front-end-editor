@@ -1,0 +1,7 @@
+<!-- home.component.html -->
+<div class="column" id="new-column">
+    <h2>New</h2>
+    <button mat-button class="custom-button" (click)="openModal()">Add New Ticket</button>
+  </div>
+  <app-card *ngFor="let ticket of newTickets" [ticket]="ticket"></app-card>
+  

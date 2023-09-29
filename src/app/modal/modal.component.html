@@ -1,0 +1,33 @@
+
+
+<h2>Add New Ticket</h2>
+<form [formGroup]="ticketForm" (ngSubmit)="submitForm()">
+  <div class="form-group m-1">
+    <label for="title">Id:</label>
+    <input type="text" id="id" name="id" formControlName="id" required />
+  </div>
+  <div class="form-group m-1">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" formControlName="title" required />
+  </div>
+
+  <div class="form-group m-1">
+    <label for="status">Status:</label>
+    <select id="status" name="status" formControlName="status" required>
+      <option value="New">New</option>
+      <option value="In Progress">In Progress</option>
+      <option value="In Review">In Review</option>
+      <option value="Done">Done</option>
+    </select>
+  </div>
+
+  <div class="form-group m-1">
+    <label for="description">Description:</label>
+    <angular-editor id="editor1" name="description" formControlName="description"></angular-editor>
+    <!-- <textarea id="description" name="description" formControlName="description"></textarea> -->
+  </div>
+
+  <!-- You can add additional fields for bold, italic, hyperlink, lists, etc., here -->
+
+  <button mat-flat-button type="submit" class="custom-button m-1">Save</button>
+</form>
